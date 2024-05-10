@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Mamma mia - te podemos ayudar...</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron&family=Oswald:wght@200&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d732e9602.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header-min">
+        <a href="index.html"><img src="images/logo-pizzeria.png" alt="Logo Mamma Mia Pizza"></a>
+        <nav>
+            <ul>
+                <li><a href="pizzas.html"><i class="fa-solid fa-pizza-slice"></i> Pizza</a></li>
+                <li><a href="burguer.html"><i class="fa-solid fa-burger"></i> Burguer</a></li>
+                <li><a href="bebidas.html"><i class="fa-solid fa-bottle-water"></i> Bebidas</a></li>
+                <li><a href="postres.html"><i class="fa-solid fa-ice-cream"></i> Postres</a></li>
+                <li class="ayuda"><a href="contacto.html"><i class="fa-solid fa-mobile-screen-button"></i> ¿Alguna
+                        Duda?</a></li>
+                <li class="ayuda"><a href="#reserva"><i class="fa-solid fa-utensils"></i>Reserva Ahora</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="site">
+        <div class="content">
+            <span> <a href="index.html">MAMMA MIA</a> </span> <b>></b> <span class="active"> CONTACTO</span>
+        </div>
+    </div>
+    <section id="contacto">
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12407.014680740687!2d-3.9249144366856505!3d38.975292347614655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spizza!5e0!3m2!1ses!2ses!4v1706260952602!5m2!1ses!2ses"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contacto">
+            <div class="section-contact">
+                <div class="form-contacto">
+                    <h3>Dejanos un mensaje</h3>
+                    <form name="formulario-contacto">
+                        <input type="text" name="nombre" class="form-direccion-medio" placeholder="Nombre y apellidos">
+                        <input type="mail" name="mail" class="form-direccion-medio"
+                            placeholder="Tu dirección de correo">
+                        <textarea name="observaciones" cols="25" rows="2" class="form-direccion-medio"
+                            placeholder="Alergias, intolerancias..."></textarea>
+                        <input type="button" value="Enviar Formulario" class="btn-siguiente">
+                    </form>
+                </div>
+                <div class="details">
+                    <h3>Datos de contacto</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Ronda de Toledo 56 Local B, Madrid</p>
+                    <p><i class="fa-solid fa-headset"></i> +34 91 555 632 </p>
+                    <p><i class="fa-solid fa-at"></i> hablamos@mamma-mia-pizza.es</p>
+                    <h3>Nuestro Horario</h3>
+                    <ul>
+                        <li>Lunes <span>CERADO</span></li>
+                        <li>Martes <span>18:00 - 01:30 H</span></li>
+                        <li>Miércoles <span>18:00 - 01:30 H</span></li>
+                        <li>Jueves <span>18:00 - 01:30 H</span></li>
+                        <li>Viernes <span>18:00 - 01:30 H</span></li>
+                        <li>Sábado <span>18:00 - 02:30 H</span></li>
+                        <li>Domingo <span>18:00 - 01:00 H</span></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <section id="reserva">
+        <h3>- Ven a cenar con nosotros -</h3>
+        <p>Reserva ahora y disfruta de bebida gratuita durante tu cena/comida.</p>
+        <div class="form">
+            <form name="reserva" class="form-reserva">
+                <input type="text" name="nombre" placeholder="Introduce nombre">
+                <input type="text" name="apellidos" placeholder="Introduce apellidos">
+                <input type="date" name="fecha">
+                <input type="time" name="hora">
+                <select name="personas">
+                    <option selected>¿Cuantas personas sois?</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <input type="tel" name="telefono" placeholder="Nº de teléfono">
+                <input type="submit" value="Reservar Ahora">
+                <input type="reset" value="Limpiar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i
+                    class="fa-brands fa-square-facebook fa-2xl social-facebook"></i> </a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><i
+                    class="fa-brands fa-square-twitter fa-2xl social-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i
+                    class="fa-brands fa-square-instagram fa-2xl social-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i
+                    class="fa-brands fa-square-youtube fa-2xl social-youtube"></i></a>
+        </div>
+        <div class="logo"><img src="images/logo-pizzeria.png" alt="Logo Pizzeria Mamma Mia"></div>
+        <div class="footer-menu">
+            Mamma Mia Pizza <span>|</span> Ronda de Toledo 56 Local B <span>|</span> +34 91 555 632 <span>|</span>
+            hablamos@mamma-mia-pizza.es
+        </div>
+        <div class="copy">
+            Copyright © 2023 Todos los derechos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>

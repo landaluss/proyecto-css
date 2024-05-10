@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Mamma mia - Completar Pedido</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron&family=Oswald:wght@200&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d732e9602.js" crossorigin="anonymous"></script>
+    <script>
+        function hide(b_id) {
+            switch (b_id) {
+                case "opc1":
+                    document.getElementById("step1").style.display = "none";
+                    document.getElementById("step2").style.display = "block";
+                    document.getElementById("step3").style.display = "none";
+                    document.getElementById("s2").classList.remove("stepvacio-steps");
+                    document.getElementById("s2").classList.add("activo-steps");
+                    document.getElementById("s3").classList.add("activo-steps");
+                    break;
+
+                case "opc2":
+                    document.getElementById("step1").style.display = "none";
+                    document.getElementById("step2").style.display = "none";
+                    document.getElementById("step3").style.display = "block";
+                    document.getElementById("s3").classList.remove("stepvacio-steps");
+                    document.getElementById("s3").classList.add("activo-steps");
+                    break;
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header-min">
+        <a href="index.html"><img src="images/logo-pizzeria.png" alt="Logo Mamma Mia Pizza"></a>
+        <nav>
+            <ul>
+                <li><a href="pizzas.html"><i class="fa-solid fa-pizza-slice"></i> Pizza</a></li>
+                <li><a href="burguer.html"><i class="fa-solid fa-burger"></i> Burguer</a></li>
+                <li><a href="bebidas.html"><i class="fa-solid fa-bottle-water"></i> Bebidas</a></li>
+                <li><a href="postres.html"><i class="fa-solid fa-ice-cream"></i> Postres</a></li>
+                <li class="ayuda"><a href="contacto.html"><i class="fa-solid fa-mobile-screen-button"></i> ¿Alguna
+                        Duda?</a></li>
+                <li class="ayuda"><a href="#reserva"><i class="fa-solid fa-utensils"></i>Reserva Ahora</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="site">
+        <div class="content">
+            <span> <a href="index.html">MAMMA MIA</a> </span> <b>></b> <span class="active"> COMPLETAR PEDIDO</span>
+        </div>
+    </div>
+    <section id="steps">
+        <table>
+            <tr>
+                <td><span class="activo-steps" id="s1">1</span></td>
+                <td>
+                    <hr>
+                </td>
+                <td><span class="stepvacio-steps" id="s2">2</span></td>
+                <td>
+                    <hr>
+                </td>
+                <td><span class="stepvacio-steps" id="s3">3</span></td>
+            </tr>
+        </table>
+        <div id="step1">
+            <div></div>
+            <form name="carrito"></form>
+            <div id="cabecera">
+                <div class="producto-carrito">PRODUCTO</div>
+                <div class="precio">PRECIO</div>
+                <div class="cantidad">CANTIDAD</div>
+                <div class="totalpagar">TOTAL</div>
+            </div>
+            <div class="lineas">
+                <div class="imagen-producto-carrito"><img src="images/2.jpg" alt=""></div>
+                <div class="desc">
+                    <h4>Pizza Carbonara Original</h4>
+                    <p><b>INGREDIENTES: </b> Base tomate, mozzarella, salsa carbonara, champiñon, cebolla y bacon.
+                    </p>
+                    <p><b>Tamaño: </b> 22 cm</p>
+                </div>
+                <div class="precio">22 €</div>
+                <div class="cantidad"><input class="number" type="number" name="cantidad1" value="2"></div>
+                <div class="totalpagar">44 €</div>
+            </div>
+            <div class="lineas">
+                <div class="imagen-producto-carrito"><img src="images/1.png" alt=""></div>
+                <div class="desc">
+                    <h4>Brutal Bacon</h4>
+                    <p><b>INGREDIENTES: </b> Carne 205 gr, salsa 'mamma mia', doble de bacon.
+                    </p>
+                    <p><b>Tamaño: </b> 250 gr</p>
+                </div>
+                <div class="precio">12 €</div>
+                <div class="cantidad"><input class="number" type="number" name="cantidad2" value="2"></div>
+                <div class="totalpagar">12 €</div>
+            </div>
+            <div class="total-pedido">
+                <div class="total-pagar">
+                    Total Pagar: <span id="total">66 €</span>
+                </div>
+            </div>
+            <div class="pedido-botones">
+                <input type="submit" value="Actualizar Carrito" class="btn-actualizar-carrito"> <input type="submit"
+                    value="Siguiente" class="btn-siguiente" id="opc1" onclick="hide(this.id)">
+            </div>
+        </div>
+        <div id="step2">
+            <form name="procesar-pedido-pago">
+                <div class="content-resumen">
+                    <div class="direccion">
+                        <h3>¿DONDE LO ENVIAMOS?</h3>
+                        <div class="content-direccion">
+                            <table>
+                                <tr>
+                                    <td><input type="text" name="nombre" class="form-direccion-medio"
+                                            placeholder="Nombre"></td>
+                                    <td><input type="text" name="apellidos" class="form-direccion-medio"
+                                            placeholder="Apellidos"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="email" name="email" class="form-direccion-medio"
+                                            placeholder="Email"></td>
+                                    <td><input type="text" name="tel" class="form-direccion-medio"
+                                            placeholder="Teléfono Móvil"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="text" name="direccion" class="form-direccion"
+                                            placeholder="Dirección"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="pais" class="form-direccion-medio" placeholder="Pais">
+                                    </td>
+                                    <td><input type="text" name="cp" class="form-direccion-medio"
+                                            placeholder="Código Postal"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3>¿TIENES ALGO QUE DECIRNOS?</h3>
+                        <textarea name="observaciones" cols="30" rows="2" class="form-direccion"
+                            placeholder="Alergias, intolerancias..."></textarea>
+                    </div>
+                    <div class="resumen">
+                        <h3>RESUMEN DEL PEDIDO</h3>
+                        <div class="content-resumens">
+                            <table>
+                                <tr>
+                                    <td><b>PRODUCTO</b></td>
+                                    <td class="rigth"><b>PRECIO</b></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>x2 Pizza Carbonara Original</td>
+                                    <td class="rigth">44 €</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><b>Tamaño: </b> <br> 22 cm</td>
+                                </tr>
+                                <tr>
+                                    <td>x1 Brutal Bacon</td>
+                                    <td class="rigth">12 €</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><b>Tamaño: </b> <br> 250 gr</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>SUBTOTAL</b></td>
+                                    <td class="rigth">61.38 €</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>IVA (7%)</b></td>
+                                    <td class="rigth">4.62 €</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>TOTAL</b></td>
+                                    <td class="rigth">66 €</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="radio" name="tipo-pago" checked> Tarjeta Online <br>
+                                        <input type="radio" name="tipo-pago"> Efectivo <br>
+                                        <input type="radio" name="tipo-pago"> PayPal <br>
+                                        <input type="radio" name="tipo-pago"> Apple Pay <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="completar-pago"><br>
+                                        <input type="checkbox" name="aceptar"> Acepto los terminos y condiciones de uso.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="completar-pago"><br>
+                                        <input type="button" value="Completar Pago" class="btn-siguiente" id="opc2"
+                                            onclick="hide(this.id)">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="step3">
+            <div class="confirmacion-pedido">
+                <i class="fa-regular fa-circle-check fa-2xl"></i>
+                <h3>Tu pedido ha sido realizado correctamente</h3>
+                <table>
+                    <tr>
+                        <td colspan="2"><b>Nº PEDIDO: </b> #6587134</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>PRODUCTO</b></td>
+                        <td class="rigth"><b>PRECIO</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>x2 Pizza Carbonara Original</td>
+                        <td class="rigth">44 €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Tamaño: </b> <br> 22 cm</td>
+                    </tr>
+                    <tr>
+                        <td>x1 Brutal Bacon</td>
+                        <td class="rigth">12 €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><b>Tamaño: </b> <br> 250 gr</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>SUBTOTAL</b></td>
+                        <td class="rigth">61.38 €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>IVA (7%)</b></td>
+                        <td class="rigth">4.62 €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>TOTAL</b></td>
+                        <td class="rigth">66 €</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="completar-pago"><br>
+                            <input type="button" value="Continuar" class="btn-siguiente"
+                                onclick="window.location.href='index.html'">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="reserva">
+        <h3>- Ven a cenar con nosotros -</h3>
+        <p>Reserva ahora y disfruta de bebida gratuita durante tu cena/comida.</p>
+        <div class="form">
+            <form name="reserva" class="form-reserva">
+                <input type="text" name="nombre" placeholder="Introduce nombre">
+                <input type="text" name="apellidos" placeholder="Introduce apellidos">
+                <input type="date" name="fecha">
+                <input type="time" name="hora">
+                <select name="personas">
+                    <option selected>¿Cuantas personas sois?</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <input type="tel" name="telefono" placeholder="Nº de teléfono">
+                <input type="submit" value="Reservar Ahora">
+                <input type="reset" value="Limpiar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i
+                    class="fa-brands fa-square-facebook fa-2xl social-facebook"></i> </a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><i
+                    class="fa-brands fa-square-twitter fa-2xl social-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i
+                    class="fa-brands fa-square-instagram fa-2xl social-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i
+                    class="fa-brands fa-square-youtube fa-2xl social-youtube"></i></a>
+        </div>
+        <div class="logo"><img src="images/logo-pizzeria.png" alt="Logo Pizzeria Mamma Mia"></div>
+        <div class="footer-menu">
+            Mamma Mia Pizza <span>|</span> Ronda de Toledo 56 Local B <span>|</span> +34 91 555 632 <span>|</span>
+            hablamos@mamma-mia-pizza.es
+        </div>
+        <div class="copy">
+            Copyright © 2023 Todos los derechos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>

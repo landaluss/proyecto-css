@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Mamma mia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron&family=Oswald:wght@200&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d732e9602.js" crossorigin="anonymous"></script>
+    <script>
+        function calcularPrecio() {
+            var radioBut = document.querySelector('input[name="tamanio"]:checked').value;
+            document.getElementById('total').innerHTML = radioBut + "€";
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header-min">
+        <a href="index.html"><img src="images/logo-pizzeria.png" alt="Logo Mamma Mia Pizza"></a>
+        <nav>
+            <ul>
+                <li><a href="pizzas.html"><i class="fa-solid fa-pizza-slice"></i> Pizza</a></li>
+                <li><a href="burguer.html"><i class="fa-solid fa-burger"></i> Burguer</a></li>
+                <li><a href="bebidas.html"><i class="fa-solid fa-bottle-water"></i> Bebidas</a></li>
+                <li><a href="postres.html"><i class="fa-solid fa-ice-cream"></i> Postres</a></li>
+                <li class="ayuda"><a href="contacto.html"><i class="fa-solid fa-mobile-screen-button"></i> ¿Alguna
+                        Duda?</a></li>
+                <li class="ayuda"><a href="#reserva"><i class="fa-solid fa-utensils"></i>Reserva Ahora</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="site">
+        <div class="content">
+            <span> MAMMA MIA </span> <b>></b> <span class="active"> PIZZAS</span> <b>></b> <span> Carbonara Original
+            </span>
+        </div>
+    </div>
+    <section class="producto">
+        <div class="content">
+            <div class="image">
+                <img src="images/1.jpg" alt="Pizza Carbonara Original">
+            </div>
+            <div class="descripcion">
+                <h3>Pizza Carbonara Original</h3>
+                <div class="icons">
+                    <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i
+                            class="fa-brands fa-square-facebook fa-2xl social-facebook"></i> </a>
+                    <a href="https://twitter.com/?lang=es" target="_blank"><i
+                            class="fa-brands fa-square-twitter fa-2xl social-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i
+                            class="fa-brands fa-square-instagram fa-2xl social-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i
+                            class="fa-brands fa-square-youtube fa-2xl social-youtube"></i></a>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni, fuga laboriosam accusantium
+                    placeat tempore mollitia, consequuntur at ad iure, perferendis exercitationem eveniet! Ducimus
+                    recusandae suscipit at blanditiis provident? Nam!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat magni, fuga laboriosam accusantium
+                    placeat tempore mollitia, consequuntur at ad iure, perferendis exercitationem eveniet! Ducimus
+                    recusandae suscipit at blanditiis provident? Nam!</p>
+                <p><b>Ingredientes:</b> consectetur adipisicing elit. Fugiat magni, fuga laboriosam accusantium
+                    placeat tempore mollitia, consequuntur at ad iure, perferendis exercitationem eveniet! Ducimus
+                    recusandae suscipit at blanditiis provident? Nam!</p>
+            </div>
+        </div>
+    </section>
+    <section class="opciones">
+        <div class="content">
+            <form name="pedido">
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <h3>Personaliza tu pizza</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="opciones-pizza">
+                            <table>
+                                <tr>
+                                    <td><b>Tipo de masa:</b></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" checked name="masa"> Base Normal</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="masa"> Doble base (+ 1.20€)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="masa"> Borde relleno de queso (+ 1.80€)</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="masa"> Rellena de queso cabra (+ 2.10€)</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="opciones-pizza">
+                            <table>
+                                <tr>
+                                    <td><b>Ingredientes: (+ 1 € * ing.)</b></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="queso"> Queso</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="masa"> Cebolla</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="masa"> Bacon</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="masa"> Aceitunas</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="masa"> Piña</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="opciones-tamanio">
+                            <table>
+                                <tr>
+                                    <td colspan="4"><b>Selecciona tu tamaño:</b></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" checked name="tamanio" onclick="calcularPrecio()"
+                                            value="22"> 22 cm</td>
+                                    <td><input type="radio" name="tamanio" value="29" onclick="calcularPrecio()"> 29 cm
+                                    </td>
+                                    <td><input type="radio" name="tamanio" value="35" onclick="calcularPrecio()"> 35 cm
+                                    </td>
+                                    <td><input type="radio" name="tamanio" value="42" onclick="calcularPrecio()"> 42 cm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><input type="radio" name="tamanio" value="50"
+                                            onclick="calcularPrecio()"> 50 cm
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="rigth">
+                            TOTAL: <span id="total">22 €</span>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <h3>¿Algo que comentarnos?</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="obs">
+                            <input type="text" name="comentario" class="form-observaciones">
+                        </td>
+                        <td class="rigth">
+                            <input type="number" name="cantidad" class="number" value="1"> <a href="carrito.html">Añadir
+                                al
+                                Pedido</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+    <section id="reserva">
+        <h3>- Ven a cenar con nosotros -</h3>
+        <p>Reserva ahora y disfruta de bebida gratuita durante tu cena/comida.</p>
+        <div class="form">
+            <form name="reserva" class="form-reserva">
+                <input type="text" name="nombre" placeholder="Introduce nombre">
+                <input type="text" name="apellidos" placeholder="Introduce apellidos">
+                <input type="date" name="fecha">
+                <input type="time" name="hora">
+                <select name="personas">
+                    <option selected>¿Cuantas personas sois?</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <input type="tel" name="telefono" placeholder="Nº de teléfono">
+                <input type="submit" value="Reservar Ahora">
+                <input type="reset" value="Limpiar">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><i
+                    class="fa-brands fa-square-facebook fa-2xl social-facebook"></i> </a>
+            <a href="https://twitter.com/?lang=es" target="_blank"><i
+                    class="fa-brands fa-square-twitter fa-2xl social-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i
+                    class="fa-brands fa-square-instagram fa-2xl social-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i
+                    class="fa-brands fa-square-youtube fa-2xl social-youtube"></i></a>
+        </div>
+        <div class="logo"><img src="images/logo-pizzeria.png" alt="Logo Pizzeria Mamma Mia"></div>
+        <div class="footer-menu">
+            Mamma Mia Pizza <span>|</span> Ronda de Toledo 56 Local B <span>|</span> +34 91 555 632 <span>|</span>
+            hablamos@mamma-mia-pizza.es
+        </div>
+        <div class="copy">
+            Copyright © 2023 Todos los derechos reservados.
+        </div>
+    </footer>
+</body>
+
+</html>
